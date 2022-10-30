@@ -32,7 +32,11 @@ const Homepage = () => {
   if (isError) {
     return <div>Error!</div>;
   }
-
+  /* 
+      The app is not functionable as I sent too many req,
+      and could not work more on it.. 
+      If another API I would surely be better :)  
+  */
   return (
     <>
       <Box sx={{ display: 'flex', justifyContent: 'center', pb: '2rem' }}>
@@ -42,7 +46,7 @@ const Homepage = () => {
           title="Continents"
         >
           {data &&
-            data
+            data /* Sorry about these types, but this API really made my life harder */
               .filter(
                 (value: { continentName: any }, index: any, self: any[]) =>
                   index ===
@@ -103,6 +107,7 @@ const Homepage = () => {
             {data &&
               data.map(
                 (item: {
+                  /* Sorry about these types, but this API really made my life harder */
                   geonameId: React.Key | null | undefined;
                   countryName:
                     | string
